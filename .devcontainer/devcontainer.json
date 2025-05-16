@@ -1,0 +1,33 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "REMOTE_USER": "${localEnv:USER}"
+        }
+    },
+    "remoteUser": "${localEnv:USER}",
+    "workspaceMount": "source=projects,target=/workspaces,type=volume",
+    "workspaceFolder": "/workspaces",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "eamodio.gitlens"
+            ],
+            "settings": {
+                "python.testing.pytestArgs": [
+                    "."
+                ],
+                "python.testing.unittestEnabled": false,
+                "python.testing.pytestEnabled": true,
+                "python.linting.enabled": true
+            }
+        }
+    },
+    "mounts": [
+        "source=${localEnv:HOME}/.aws,target=/workspaces/.aws,type=bind,readonly",
+        "source=${localEnv:HOME}/.netrc,target=/workspaces/.netrc,type=bind,readonly"
+    ],
+    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+}
