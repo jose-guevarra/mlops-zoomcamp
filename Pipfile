@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+"moto" = {index = "pypi", version = "*"}
+"pylint" = {index = "pypi", version = "*"}
+"pytest" = {index = "pypi", version = "*"}
+"pytest-cov" = {index = "pypi", version = "*"}
+
+[packages]
+"boto3" = "*"
+"httpx" = "*"
+"ipykernel" = "*"
+"jupyter" = "*"
+"matplotlib" = "*"
+"numpy" = "*"
+"pandas" = "*"
+"pyarrow" = "*"
+"python-dotenv" = "*"
+"scikit-learn" = "*"
+"seaborn" = "*"
+"tensorflow" = "*"
+
+[requires]
+python_version = "3.11"
