@@ -21,7 +21,11 @@ verify_ssl = true
 "python-dotenv" = "*"
 "scikit-learn" = "*"
 "seaborn" = "*"
-"tensorflow" = "*"
+
+"mlflow" = "*"
+"hyperopt" = "*"
+"xgboost" = "*"
+"fastparquet" = "*"
 
 [requires]
 python_version = "3.11"
