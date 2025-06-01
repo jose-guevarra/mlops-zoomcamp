@@ -2,7 +2,7 @@ FROM public.ecr.aws/amazonlinux/amazonlinux:latest
 
 # Use venv dir local to Pipfile
 ENV PIPENV_VENV_IN_PROJECT=1
-
+ENV PIPENV_VERBOSITY=-1
 
 RUN dnf update -y && yum install -y sudo vim git unzip make wget \
     python3-pip python3.11 python3.11-pip glibc-langpack-en
