@@ -27,5 +27,8 @@ verify_ssl = true
 "xgboost" = "*"
 "fastparquet" = "*"
 
+
+"prefect" = "*"
+
 [requires]
 python_version = "3.11"
